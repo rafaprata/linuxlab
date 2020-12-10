@@ -1,0 +1,43 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#Box / OS
+VAGRANT_BOX = 'ubuntu/trusty64'
+
+
+
+Vagrant.configure("2") do |config|
+
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Configurar qual é o Sistema Operacional
+  config.vm.box = VAGRANT_BOX 
+
+  # Configurar o OS tem atualizações
+  # config.vm.box_check_update = false
+
+  # Configurar toda a rede do VM
+  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  # config.vm.network "private_network", ip: "192.168.33.10"
+  # config.vm.network "public_network"
+
+  # Configurar pastas sincronizadas
+  # config.vm.synced_folder "../data", "/vagrant_data"
+
+  # Configurar manualmente o Provider (VirtualBox) https://www.vagrantup.com/docs/providers/virtualbox/configuration
+  # config.vm.provider "virtualbox" do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+  #   vb.memory = "1024"
+  # end
+
+  # Configurar todas as configurações do server usando ShellScript
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+end
