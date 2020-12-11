@@ -5,12 +5,9 @@
 VAGRANT_BOX = 'ubuntu/trusty64'
 
 # Servers
-vms = {
-  'security' => {'memory' => '1024', 'cpus' => 1, 'ip' => '1', 'box' => #VAGRANT_BOX, 'provision' => 'security.sh'},
+vms = {'security' => {'memory' => '1024', 'cpus' => 1, 'ip' => '1', 'box' => 'ubuntu/trusty64', 'provision' => 'security.sh'}}
 
-}
-
-Vagrant.configure("2") do |config|
+Vagrant.configure('2') do |config|
 
   # Configurar o OS tem atualizações
   config.vm.box_check_update = false
