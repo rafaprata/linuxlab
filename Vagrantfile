@@ -5,7 +5,10 @@
 VAGRANT_BOX = 'ubuntu/trusty64'
 
 # Servers
-vms = {'security' => {'memory' => '1024', 'cpus' => 1, 'ip' => '1', 'box' => 'ubuntu/trusty64', 'provision' => 'security.sh'}}
+vms = {'security' => {'memory' => '1024', 'cpus' => 1, 'ip' => '1', 'box' => 'ubuntu/trusty64', 'provision' => 'security.sh'},
+    'storage' => {'memory' => '10240', 'cpus' => 1, 'ip' => '101', 'box' => 'ubuntu/trusty64', 'provision' => 'storage.sh'}
+
+}
 
 Vagrant.configure('2') do |config|
 
