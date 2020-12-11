@@ -1,9 +1,6 @@
 #!/bin/sh
 
 apt-get update
-
-apt-get install 
-
 apt-get install -y vim net-tools
 
 id devops
