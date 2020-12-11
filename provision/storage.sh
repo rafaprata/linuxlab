@@ -10,6 +10,7 @@ fi
 
 # Matando interface eth0
 echo " " > /etc/network/interfaces.d/eth0.cfg
+/etc/init.d/networking restart
 
 # Removendo Gateway pelo eth0
 route del default
